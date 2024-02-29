@@ -1,0 +1,57 @@
+runCmd: settings clear -all
+
+output: 
+
+runCmd: settings set symbols.enable-external-lookup false
+
+output: 
+
+runCmd: settings set target.inherit-tcc true
+
+output: 
+
+runCmd: settings set target.detach-on-error false
+
+output: 
+
+runCmd: settings set target.auto-apply-fixits false
+
+output: 
+
+runCmd: settings set plugin.process.gdb-remote.packet-timeout 60
+
+output: 
+
+runCmd: settings set symbols.clang-modules-cache-path "C:/Users/iammorjj/llvm-project/build/lldb-test-build.noindex\module-cache-lldb"
+
+output: 
+
+runCmd: settings set use-color false
+
+output: 
+
+runCmd: settings set target.env-vars PATH=
+
+output: 
+
+make 'VPATH=C:\Users\iammorjj\llvm-project\lldb\test\API\functionalities\inline-sourcefile' -C 'C:\Users\iammorjj\llvm-project\build\lldb-test-build.noindex\functionalities\inline-sourcefile\TestInlineSourceFiles.test_dwarf' -I 'C:\Users\iammorjj\llvm-project\lldb\test\API\functionalities\inline-sourcefile' -I 'C:\Users\iammorjj\llvm-project\lldb\packages\Python\lldbsuite\test\make' -f 'C:\Users\iammorjj\llvm-project\lldb\test\API\functionalities\inline-sourcefile\Makefile' MAKE_DSYM=NO all ARCH=x86_64 'CC="C:\Users\iammorjj\llvm-project\build\bin\clang.exe"' 'CLANG_MODULE_CACHE_DIR=C:/Users/iammorjj/llvm-project/build/lldb-test-build.noindex\module-cache-clang'
+
+make: Entering directory `C:/Users/iammorjj/llvm-project/build/lldb-test-build.noindex/functionalities/inline-sourcefile/TestInlineSourceFiles.test_dwarf'
+"C:\Users\iammorjj\llvm-project\build\bin\clang.exe" -gdwarf -O0 -m64  -IC:\Users\iammorjj\llvm-project\lldb\packages\Python\lldbsuite\test\make/../../../../../include -IC:\Users\iammorjj\llvm-project\lldb\test\API\functionalities\inline-sourcefile -IC:\Users\iammorjj\llvm-project\lldb\packages\Python\lldbsuite\test\make -include C:\Users\iammorjj\llvm-project\lldb\packages\Python\lldbsuite\test\make/test_common.h  -fno-limit-debug-info  -gdwarf-5 -MT main.o -MD -MP -MF main.d -c -o main.o C:\Users\iammorjj\llvm-project\lldb\test\API\functionalities\inline-sourcefile/main.c
+"C:\Users\iammorjj\llvm-project\build\bin\clang.exe" C:\Users\iammorjj\llvm-project\lldb\test\API\functionalities\inline-sourcefile/inline.ll -c -o inline.o
+warning: overriding the module target triple with x86_64-pc-windows-msvc19.39.33520 [-Woverride-module]
+1 warning generated.
+"C:\Users\iammorjj\llvm-project\build\bin\clang.exe"  main.o inline.o -gdwarf -O0 -m64  -IC:\Users\iammorjj\llvm-project\lldb\packages\Python\lldbsuite\test\make/../../../../../include -IC:\Users\iammorjj\llvm-project\lldb\test\API\functionalities\inline-sourcefile -IC:\Users\iammorjj\llvm-project\lldb\packages\Python\lldbsuite\test\make -include C:\Users\iammorjj\llvm-project\lldb\packages\Python\lldbsuite\test\make/test_common.h  -fno-limit-debug-info  -gdwarf-5   -fuse-ld=lld --driver-mode=g++ -o "a.out"
+lld-link: warning: section name .debug_abbrev is longer than 8 characters and will use a non-standard string table
+lld-link: warning: section name .debug_addr is longer than 8 characters and will use a non-standard string table
+lld-link: warning: section name .debug_info is longer than 8 characters and will use a non-standard string table
+lld-link: warning: section name .debug_line is longer than 8 characters and will use a non-standard string table
+lld-link: warning: section name .debug_line_str is longer than 8 characters and will use a non-standard string table
+lld-link: warning: section name .debug_names is longer than 8 characters and will use a non-standard string table
+lld-link: warning: section name .debug_str is longer than 8 characters and will use a non-standard string table
+lld-link: warning: section name .debug_str_offsets is longer than 8 characters and will use a non-standard string table
+make: Leaving directory `C:/Users/iammorjj/llvm-project/build/lldb-test-build.noindex/functionalities/inline-sourcefile/TestInlineSourceFiles.test_dwarf'
+
+
+FAIL
+
